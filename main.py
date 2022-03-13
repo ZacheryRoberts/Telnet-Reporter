@@ -5,11 +5,11 @@ import ipaddress
 def telnetTest(network, output):
     for ip in network:
         try:
-                tn = telnetlib.Telnet(str(ip))
-                tn_read = tn.read_until(b": ",2)
-                if tn_read != "":
-                    output.append(str(ip))
-                print(f"{ip} Telnet Accepted")
+            tn = telnetlib.Telnet(str(ip))
+            tn_read = tn.read_until(b": ",2)
+            if tn_read != "":
+                output.append(str(ip))
+            print(f"{ip} Telnet Accepted")
         except:
             print(f"{ip} Telnet Refused or Host Not Available")
     return(output)
