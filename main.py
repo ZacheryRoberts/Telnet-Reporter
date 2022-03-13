@@ -1,6 +1,5 @@
 import telnetlib
 import ipaddress
-from joblib import Parallel, delayed
 
 # If finds login prompt, return address
 def telnetTest(network, output):
