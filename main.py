@@ -21,7 +21,7 @@ if __name__ == "__main__":
         address = input("Network Addr: ")
         cidr = input("Netmask (CIDR): ")
         network = ipaddress.IPv4Network(f"{address}/{cidr}")
-        Parallel(n_jobs=4)(delayed(telnetTest(network, telnetHosts)))
+        print(telnetTest(network, telnetHosts))
     except ValueError:
         print('address/netmask is invalid for IPv4:', address, cidr)
     
