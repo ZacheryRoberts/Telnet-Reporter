@@ -33,7 +33,7 @@ if __name__ == "__main__":
         address, cidr = input("Network Addr: "), int(input("Netmask (CIDR): "))
 
         # Split Subnets for Multi Processing
-        speed = min(max(int(input("Speed (1-8): ")), 1), 8)        
+        speed = min(max(int(input("Speed (1-4): ")), 1), 4)        
         cidrSplit = min(max(speed+cidr, 0), 32)
 
         networkSplit.append(get_network(address, cidrSplit))
